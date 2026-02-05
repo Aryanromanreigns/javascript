@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+        }
+        .bg-black{
+            background-color: rgb(12, 7, 7);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 id="title" class="heading">dom learning in late night </h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('title').id
+        document.getElementById('title').className
+        document.getElementById('title').getAttribute('id')
+        document.getElementById('title').getAttribute('class')
+        document.getElementById('title').setAttribute('class','test')//it will overwrite
+        document.getElementById('title').setAttribute('class','test heading')//now there will be two class
+
+        const title = document.getElementById('title')
+        title.style.backgroundColor = 'green'
+        title.style.padding = '55px'
+        title.style.borderRadius = '55px'
+
+
+        title.innerHTML//all the content with style div name also 
+        title.textContent///all the content up to that div will end
+        title.innerText //only till first content if second another div start then it stop
+        //this all give the dom learning in late night
+
+
+        // document.getElementsByClassName same works as id 
+
+
+
+        // if we use the query selector then we get the first value
+        document.querySelector('div')
+        document.querySelector('#title')
+        document.querySelector('.heading')
+        document.querySelector('p:first-child')
+
+
+
+        const ul = document.querySelector('ul')
+
+        const li = ul.querySelector('li')
+        const green = li.style.backgroundColor = 'green'
+        green.innerHTML = 'five'
+
+
+        const arrli = document.querySelectorAll('li')//this will give array of ...
+        arrli[0].style.color = 'green'
+
+
+
+        const tempclassitem = document.getElementsByClassName('list-item')
+        //html collectoon to change to array
+
+
+        Array.from(tempclassitem)
+
+        
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

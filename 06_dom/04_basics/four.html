@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;color: white;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+</body>
+<script>
+    //add value
+    function addlistitem(additem){
+        const li = document.createElement('li');
+        li.innerHTML = `${additem}`
+        document.querySelector('.language').appendChild(li)
+        
+    }
+    addlistitem("python")
+    addlistitem("javascript")
+    // here we get the problem that if the list item is too big it will take too much time to implement
+
+
+    function addOptimseItem(item){
+        const li = document.createElement('li');
+        const items = document.createTextNode(item)
+        document.querySelector('.language').appendChild(items);
+    }
+    addOptimseItem('aryan')
+
+    //edit value
+    const secli = document.querySelector('li:nth-child(2)')
+    // secli.innerHTML = 'change' but this is not the proper way of changing the inner html
+    const newsec = document.createElement('li');
+    newsec.textContent = 'are bhai chup rho na '
+    secli.replaceWith(newsec)
+
+
+    const firele = document.querySelector('li:first-child')
+    firele.outerHTML = '<li>javascript is one of the popular language in the world</li>'
+
+
+
+    //remove
+    const lastele = document.querySelector('li:last-child')
+    lastele.remove()
+
+
+
+    
+
+    
+
+
+    
+</script>
+</html>
