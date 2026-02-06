@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Number Guessing Game</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: #212121;
+      color: #fff;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #e5e5e5;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      padding: 6px 14px;
+      border: 1px solid #888;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
+
+    /* Main wrapper */
+    #wrapper {
+      max-width: 420px;
+      margin: 40px auto;
+      background-color: #3a3a3a;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    /* Form */
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .guessField {
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 15px;
+    }
+
+    .guessSubmit {
+      width: 100%;
+      padding: 10px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .guessSubmit:hover {
+      background-color: #111;
+    }
+
+    /* Results */
+    .resultParas {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .lowOrHi {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="/" aria-current="page">Home</a>
+    <a target="_blank" href="https://www.youtube.com/@chaiaurcode">
+      Youtube channel
+    </a>
+  </nav>
+
+  <div id="wrapper">
+    <h1>Number guessing game</h1>
+    <p>Try and guess a random number between 1 and 100.</p>
+    <p>You have 10 attempts to guess the right number.</p>
+
+    <form class="form">
+      <label for="guessField" id="guess">Guess a number</label>
+      <input type="text" id="guessField" class="guessField" />
+      <input type="submit" id="subt" value="Submit guess" class="guessSubmit" />
+    </form>
+
+    <div class="resultParas">
+      <p>Previous Guesses: <span class="guesses"></span></p>
+      <p>Guesses Remaining: <span class="lastResult">10</span></p>
+      <p class="lowOrHi"></p>
+    </div>
+  </div>
+
+</body>
+</html>
